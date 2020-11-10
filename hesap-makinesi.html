@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			table,
+			th,
+			td,
+			tr {
+				border: thin solid;
+				text-align: center;
+			}
+			table {
+				border-collapse: collapse;
+				width: 200px;
+				height: 200px;
+			}
+			th {
+				height: 30px;
+				text-align: left;
+				padding-left: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<form name="a">
+			<table>
+				<tr>
+					<th name="b" colspan="4">0</th>
+				</tr>
+				<tr>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=7">7</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=8">8</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=9">9</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+='+'" style="background-color: #ddd">
+						+
+					</td>
+				</tr>
+				<tr>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=4">4</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=5">5</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=6">6</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+='-'" style="background-color: #ddd">
+						-
+					</td>
+				</tr>
+				<tr>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=1">1</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=2">2</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=3">3</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+='*'" style="background-color: #ddd">
+						*
+					</td>
+				</tr>
+				<tr>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML=' '" style="background-color: #ddd">
+						C
+					</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+=0">0</td>
+					<td
+						onclick="document.getElementsByTagName('th')[0].innerHTML=eval(document.getElementsByTagName('th')[0].innerHTML)"
+						style="background-color: #ddd"
+					>
+						=
+					</td>
+					<td onclick="document.getElementsByTagName('th')[0].innerHTML+='/'" style="background-color: #ddd">
+						/
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
